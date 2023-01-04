@@ -7,7 +7,7 @@ import { displayFeeback } from './feedback.js';
 export const newComment = newSectOneItem2.addEventListener('click', (e) => {
     e.preventDefault();
     if(e.target.classList.contains('like__btn__home')) {
-        let mealItem = e.target.parentElement;
+        let mealItem = e.target.parentElement.parentElement.parentElement;
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
         .then(response => response.json())
         .then(data => mealCommentModalHome(data.meals));
