@@ -1,9 +1,7 @@
 import { newHumburger, newNavMenu, newMealDetailsContent, 
-  newMealDetailsContentHome, newRecipeCloseBtnHome, newmealDetailsContentHomeComment,
-newMealLlist, newRecipeCloseBtn, newSearchBtn, newApiUrl, newNavLink,   
- newLikeBtnHome, newScetOnCont, newLoad, newContact,
- newSectOneWrapper, newNavLinkHome, newSectOneItem2, 
- newNavLinkSearch } from './variables.js';
+  newMealDetailsContentHome, newRecipeCloseBtnHome, 
+newMealLlist, newRecipeCloseBtn, newSearchBtn,  newSectOneItem2, 
+  } from './variables.js';
 
 /* || Meals Page */
 export const newWindo = window.addEventListener('load', async() => {
