@@ -136,7 +136,7 @@ export const newComment = newSectOneItem2.addEventListener('click', (e) => {
                     }
                   };
                  
-                   
+                  getAllMyGameScores()             
   } 
   
   /* || Remove Recipe */
