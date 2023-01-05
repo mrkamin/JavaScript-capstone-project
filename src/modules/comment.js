@@ -90,8 +90,7 @@ export const newComment = newSectOneItem2.addEventListener('click', (e) => {
                        
                         return myData;
                       }
-                      getAllGameScores();
-                      displayFeeback(myData.result);
+                     
                       return myData;
                     } catch (error) {
                       return error;
