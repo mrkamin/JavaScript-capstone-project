@@ -387,6 +387,7 @@ header {
   justify-content: space-between;
   width: 100%;
   padding: 16px;
+  align-items: center;
 }
 
 .like__btn {
@@ -412,14 +413,12 @@ header {
 
 .liky__home {
   display: flex;
+  flex-direction: column ;
+}
+
+.new__like {
+  display: flex;
   gap: 5px;
-  border-radius: 0.2rem;
-  padding: 5px;
-  border: none;
-  width: 90px;
-  font-size: 14px;
-  justify-content: center;
-  background: var(--C-BASIC-LIGHT);
 }
 
 .like__btn:hover {
@@ -687,7 +686,6 @@ header {
   border-radius: 0.5rem;
   border: none;
   background: var(--C-BASIC-LIGHT);
-  border: none;
   font-size: 20px;
   color: var(--C-DARK);
 }
@@ -702,6 +700,10 @@ header {
   height: 200px;
   padding: 10px;
   color: var(--C-DARK);
+  border-radius: 0.5rem;
+  border: none;
+  background: var(--C-BASIC-LIGHT);
+  font-size: 20px;
 }
 
 .sub__btn {

@@ -1,24 +1,24 @@
 
 
-export const newHumburger = document.querySelector('.humburger'); console.log(newHumburger,1);
-export const newNavMenu = document.querySelector('.nav__menu'); console.log(newNavMenu,2);
-export const newSearchBtn = document.getElementById('search__btn'); console.log(newSearchBtn, 3);
-export const newMealLlist = document.getElementById('meal'); console.log(newMealLlist, 4);
-export const newMealDetailsContent = document.querySelector('.meal__details__content'); console.log(newMealDetailsContent, 5);
-export const newMealDetailsContentHome = document.querySelector('.meal__details__content__home'); console.log(newMealDetailsContentHome, 6);
-export const newmealDetailsContentHomeComment = document.querySelector('.meal__details__content__home__comment'); console.log(newmealDetailsContentHomeComment, 7);
-export const newRecipeCloseBtn = document.getElementById('recipe__close__btn'); console.log(newRecipeCloseBtn, 8);
-export const newRecipeCloseBtnHome = document.getElementById('recipe__close__btn__home'); console.log(newRecipeCloseBtnHome, 9);
-export const newRecipeCloseBtnHomeComment = document.getElementById('recipe__close__btn__home__comment');  console.log(newRecipeCloseBtnHomeComment, 10);
+export const newHumburger = document.querySelector('.humburger'); 
+export const newNavMenu = document.querySelector('.nav__menu'); 
+export const newSearchBtn = document.getElementById('search__btn');
+export const newMealLlist = document.getElementById('meal'); 
+export const newMealDetailsContent = document.querySelector('.meal__details__content'); 
+export const newMealDetailsContentHome = document.querySelector('.meal__details__content__home'); 
+export const newmealDetailsContentHomeComment = document.querySelector('.meal__details__content__home__comment'); 
+export const newRecipeCloseBtn = document.getElementById('recipe__close__btn'); 
+export const newRecipeCloseBtnHome = document.getElementById('recipe__close__btn__home'); 
+export const newRecipeCloseBtnHomeComment = document.getElementById('recipe__close__btn__home__comment');  
 export const newApiUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=`;
 export const newApiUrlLookup = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=`;
-export const newScetOnCont = document.getElementById('sect__one__cont'); console.log(newScetOnCont, 14);
-export const newNavLinkHome = document.getElementById('nav__link__home');console.log(newNavLinkHome, 16);
-export const newNavLinkSearch = document.getElementById('nav__link__search');console.log(newNavLinkSearch, 17);
-export const newSectOneWrapper = document.getElementById('meal__wrapper');  console.log(newSectOneWrapper, 18);
-export const newLoad = document.getElementById('screen__loader'); console.log(newLoad, 19);
-export const newSectOneItem2 = document.getElementById('sect__one__cont__items__item2'); console.log(newSectOneItem2, 20);
-export const newContact = document.getElementById('nav__link__ingred'); console.log(newContact, 21)
-export const newNavLink = document.querySelector('.nav__link'); console.log(newNavLink, 22);
-export const newMealCommentHome = document.querySelector('#meal__details__comment'); console.log(newMealCommentHome,25);
+export const newScetOnCont = document.getElementById('sect__one__cont'); 
+export const newNavLinkHome = document.getElementById('nav__link__home');
+export const newNavLinkSearch = document.getElementById('nav__link__search');
+export const newSectOneWrapper = document.getElementById('meal__wrapper');  
+export const newLoad = document.getElementById('screen__loader'); 
+export const newSectOneItem2 = document.getElementById('sect__one__cont__items__item2'); 
+export const newContact = document.getElementById('nav__link__ingred'); 
+export const newNavLink = document.querySelector('.nav__link'); 
+export const newMealCommentHome = document.querySelector('#meal__details__comment'); 
 

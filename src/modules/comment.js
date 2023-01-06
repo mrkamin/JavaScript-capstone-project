@@ -52,7 +52,7 @@ export const newComment = newSectOneItem2.addEventListener('click', (e) => {
                 const newCommetBtnHom = document.getElementById('comment__btn');
                 const newScoreForm = document.getElementById('sect__one__cont__item2__form');
                 const  newScoreList = document.getElementById('sect__one__cont__item1__item2');
-                const apiEndpoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ccAPKkrvgeQ6AUdU11Jx/scores/';
+                const apiEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/0hv6N1ThBvh5uDeVdjVD/comments/?item_id=item1';
                 const apiGameUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
                 
 
@@ -90,7 +90,8 @@ export const newComment = newSectOneItem2.addEventListener('click', (e) => {
                        
                         return myData;
                       }
-                     
+                      getAllGameScores();
+                      displayFeeback(myData.result);
                       return myData;
                     } catch (error) {
                       return error;
@@ -111,7 +112,7 @@ export const newComment = newSectOneItem2.addEventListener('click', (e) => {
                   
                    const getAllMyGameScores = async () => {
                     try {
-                      const rest = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ccAPKkrvgeQ6AUdU11Jx/scores/`);
+                      const rest = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/0hv6N1ThBvh5uDeVdjVD/comments`);
                       const myData = await rest.json();
                       console.log(rest)
                       

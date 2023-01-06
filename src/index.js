@@ -90,7 +90,9 @@ newNavLinkHome.addEventListener('click', (e) => {
 newHumburger.addEventListener('click', () => {
     newHumburger.classList.toggle('active');
     newNavMenu.classList.toggle('active');
+   
 });
+
 
 
 
