@@ -12,48 +12,83 @@
       referrerpolicy="no-referrer"
     />
     <title>JS Capeston Proj</title>
-  <script defer src="main.bundle.js"></script></head>
+  <script defer src="runtime.js"></script><script defer src="index.js"></script></head>
   <body>
     <header id="header" class="header">
       <nav id="navbar" class="navbar">
-        <a href="" class="logo">Meals</a>
-        <ul id="nav__menu" class="nav__menu">
-          <li id="nav__item" class="nav__item">
-            <a href="" id="nav__link__home" class="nav__link active">Meals</a>
+        <a href="" class="logo" id="logo">Meals</a>
+        <ul id="nav__menue" class="nav__menue">
+          <li>
+            <a
+              href="./index.html"
+              id="meals__nav__link"
+              class="nav__link active"
+              >Meals <span class="total__meals"></span
+            ></a>
           </li>
-          <li id="nav__item" class="nav__item">
-            <a href="" id="nav__link__search" class="nav__link">Search Meals</a>
+          <li>
+            <a href="./index.html" id="search__nav__link" class="nav__link"
+              >Search Meals<span class="search__total__meals"></span
+            ></a>
           </li>
-          <li id="nav__item" class="nav__item">
-            <a href="" id="nav__link__ingred" class="nav__link">Ingredents</a>
+          <li>
+            <a href="./index.html" id="contact__nav__link" class="nav__link"
+              >Contact</a
+            >
           </li>
         </ul>
-        <div id="humburger" class="humburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <div id="hamburger" class="hamburger">
+          <span class="bars"></span>
+          <span class="bars"></span>
+          <span class="bars"></span>
         </div>
       </nav>
     </header>
     <!-- || End of Header -->
-
     <!-- || Screen Loader -->
     <div id="screen__loader" class="screen__loader hide"></div>
     <!-- || End Screen Loader -->
-
     <!-- || Main -->
     <main id="main" class="main">
       <!-- || Section One -->
       <section id="sect__one" class="sect__one">
-        <!-- || Section One Container -->
+        <!-- || Section__One__Container -->
         <div id="sect__one__cont" class="sect__one__cont">
-          <!-- || Search Meals Page -->
-          <div id="meal__wrapper" class="meal__wrapper hide">
+          <!-- || Meals Wrapper -->
+          <div id="meal__wrapper" class="meal__wrapper show">
+            <!-- || Meals Wrpper Items -->
+            <div id="all__meals" class="all__meals"></div>
+            <!-- || Meals Wrapper Items Details for Recipe Btn -->
+            <div id="meal__details__recipe" class="meal__details__recipe">
+              <!-- || Recipe Close Btn -->
+              <button
+                type="button"
+                id="recipe__close__btn"
+                class="btn recipe__close__btn"
+              >
+                <i class="fas fa-times"></i>
+              </button>
+              <div
+                id="meal__details__content__recipe"
+                class="meal__details__content__recip"
+              ></div>
+            </div>
+            <!-- || Meals Wrapper Items Details for Comment Btn -->
+            <div id="meal__details__comment" class="meal__details__comment">
+              <div
+                id="meal__details__content__Comment"
+                class="meal__details__content_Comment"
+              ></div>
+            </div>  
+          </div>
+          <!-- || Search Meals Wrapper -->
+          <div id="search__meal__wrapper" class="search__meal__wrapper hide">
+            <!-- || Search Meals Wrapper Upper Heade -->
             <div id="meal__search" class="meal__search">
               <h2 class="title">Find Meals for your Ingreients</h2>
               <blockquote>
-                Real Food doesn't have Ingredents, real food is Ingredents,
-                <br /><cite>- Jamie Oliver</cite>
+                Note: Please Search Meals by Catagory suach as "egg, chicken,
+                beef......"
               </blockquote>
               <div id="meal__search__box" class="meal__search__box">
                 <input
@@ -67,205 +102,61 @@
                 </button>
               </div>
             </div>
-            <div id="sect__one__cont__items" class="sect__one__cont__items">
+            <div id="search__meal__result" class="search__meal__result">
               <h2 class="title">Your Search Results</h2>
-              <div id="meal">
-                <!-- <div class="meal__item">
-                  <div class="meal__img">
-                    <img
-                      src="assets/img/namkeen.jpg"
-                      alt="IndianFood"
-                      class="piza__pic"
-                    />
-                  </div>
-                  <div class="meal__name">
-                    <h2>Piza</h2>
-                    <a href="" class="recipe__btn">Get Recipe</a>
-                  </div>
-                  <div class="like__comment">
-                    <div class="liky">
-                      <button type="submit" class="like__btn">
-                        <p>Likes(1)</p>
-                        <img
-                          src="assets/img/heart-line.png"
-                          alt="heart_line"
-                          class="hear__line__pic"
-                        />
-                      </button>
-                    </div>
-                    <div class="comment">
-                      <button type="submit" class="comment__btn">
-                        Comment
-                      </button>
-                    </div>
-                  </div>
-                </div> -->
-              </div>
-            </div>
-            <!-- || End Of Meals Items -->
-
-            <!-- || Meails Deails for Recipe in Meals Search -->
-
-            <div class="meal__details">
-              <!-- || Recipi Close Btn -->
-              <button
-                type="button"
-                id="recipe__close__btn"
-                class="btn recipe__close__btn"
-              >
-                <i class="fas fa-times"></i>
-              </button>
-              <div id="meal__details__content" class="meal__details__content">
-                <!-- <h2 class="recipe__title">Meals Name Heare</h2>
-                <p class="recipe__catagory">Category Name</p>
-                <div class="recipe__instruct">
-                  <h3>Instraction</h3>
-                  <p>
-                    Aushak is one of the most popular Afghani dishes and is
-                    generally eaten during the month of Ramadan or other Islamic
-                    festivals. Pasta dumplings are stuffed with chives, tomato
-                    purée, kofta pashaan (minced meat sauce), and then topped
-                    with a special yogurt sauce and dried mint leaves.
-                  </p>
-                </div>
-                <div class="recipe__meal__img">
-                  <img src="./assets/img/Piza.jpg" alt="Piza" />
-                </div>
-                <div class="recipe__link">
-                  <a href="#" target="_blank">Watch Video</a>
-                </div> -->
-              </div>
-            </div>
-
-            <!-- || Meal Details for comment in Meals search -->
-            <div class="meal__details__comment">
-              <!-- || Recipi Close Btn -->
-              <button
-                type="button"
-                id="recipe__close__btn__comment"
-                class="btn recipe__close__btn__comment"
-              >
-                <i class="fas fa-times"></i>
-              </button>
+              <!-- || Search Meals Wrpper Items -->
+              <div id="search__all__meals" class="search__all__meals"></div>
+              <!-- || Search Meals Wrapper Items Details for Recipe Btn -->
               <div
-                id="meal__details__content__comment"
-                class="meal__details__content__comment"
+                id="search__meal__details__recipe"
+                class="search__meal__details__recipe"
               >
-                <!-- <h2 class="recipe__title">Meals Name Heare</h2>
-                <p class="recipe__catagory">Category Name</p>
-                <div class="recipe__instruct">
-                  <h3>Instraction</h3>
-                  <p>
-                    Aushak is one of the most popular Afghani dishes and is
-                    generally eaten during the month of Ramadan or other Islamic
-                    festivals. Pasta dumplings are stuffed with chives, tomato
-                    purée, kofta pashaan (minced meat sauce), and then topped
-                    with a special yogurt sauce and dried mint leaves.
-                  </p>
-                </div>
-                <div class="recipe__meal__img">
-                  <img src="./assets/img/Piza.jpg" alt="Piza" />
-                </div>
-                <div class="recipe__link">
-                  <a href="#" target="_blank">Watch Video</a>
-                </div> -->
+                <!-- || Search Recipe Close Btn -->
+                <button
+                  type="button"
+                  id="recipe__close__btn"
+                  class="btn recipe__close__btn"
+                >
+                  <i class="fas fa-times"></i>
+                </button>
+                <div
+                  id="search__meal__details__content__recipe"
+                  class="search__meal__details__content__recip"
+                ></div>
+              </div>
+              <!-- || Search Meals Wrapper Items Details for Recipe Btn -->
+              <div
+                id="search__meal__details__comment"
+                class="search__meal__details__comment"
+              >
+                <!-- || Search Comment Close Btn -->
+                <button
+                  type="button"
+                  id="search__comment__close__btn"
+                  class="btn search__comment__close__btn"
+                >
+                  <i class="fas fa-times"></i>
+                </button>
+                <!-- || Search Meals Details Content Comment -->
+                <div
+                  id="search__meal__details__content__Comment"
+                  class="search__meal__details__content_Comment"
+                ></div>
               </div>
             </div>
           </div>
-
-          <!-- || Meals Page -->
-          <div class="meal__wrapper__home">
-            <!-- || Meals page Items -->
-            <div
-              id="sect__one__cont__items__item2"
-              class="sect__one__cont__items__item2 show"
-            ></div>
-
-            <!-- || Meails Deails for Recipe in Meals -->
-            <div class="meal__details home">
-              <!-- || Recipi Close Btn -->
-              <button
-                type="button"
-                id="recipe__close__btn__home"
-                class="btn recipe__close__btn__home"
-              >
-                <i class="fas fa-times"></i>
-              </button>
-              <div
-                id="meal__details__content__home"
-                class="meal__details__content__home"
-              >
-                <!-- <h2 class="recipe__title">Meals Name Heare</h2>
-                <p class="recipe__catagory">Category Name</p>
-                <div class="recipe__instruct">
-                  <h3>Instraction</h3>
-                  <p>
-                    Aushak is one of the most popular Afghani dishes and is
-                    generally eaten during the month of Ramadan or other Islamic
-                    festivals. Pasta dumplings are stuffed with chives, tomato
-                    purée, kofta pashaan (minced meat sauce), and then topped
-                    with a special yogurt sauce and dried mint leaves.
-                  </p>
-                </div>
-                <div class="recipe__meal__img">
-                  <img src="./assets/img/Piza.jpg" alt="Piza" />
-                </div>
-                <div class="recipe__link">
-                  <a href="#" target="_blank">Watch Video</a>
-                </div> -->
-              </div>
-            </div>
-
-            <!-- || Meal Details for comment in Meals -->
-            <div class="meal__details__comment home" id="meal__details__comment">
-              <!-- || Recipi Close Btn -->
-              <button
-                type="button"
-                id="recipe__close__btn__home__comment"
-                class="btn recipe__close__btn__home__comment"
-              >
-                <i class="fas fa-times"></i>
-              </button>
-              <div
-                id="meal__details__content__home__comment"
-                class="meal__details__content__home__comment"
-              >
-                <!-- <h2 class="recipe__title">Meals Name Heare</h2>
-                <p class="recipe__catagory">Category Name</p>
-                <div class="recipe__instruct">
-                  <h3>Instraction</h3>
-                  <p>
-                    Aushak is one of the most popular Afghani dishes and is
-                    generally eaten during the month of Ramadan or other Islamic
-                    festivals. Pasta dumplings are stuffed with chives, tomato
-                    purée, kofta pashaan (minced meat sauce), and then topped
-                    with a special yogurt sauce and dried mint leaves.
-                  </p>
-                </div>
-                <div class="recipe__meal__img">
-                  <img src="./assets/img/Piza.jpg" alt="Piza" />
-                </div>
-                <div class="recipe__link">
-                  <a href="#" target="_blank">Watch Video</a>
-                </div> -->
-              </div>
-            </div>
+          <!-- Contact Meals Wrapper -->
+          <div id="contact__meal__wrapper" class="contact__meal__wrapper hide">
+            <h2>contact info</h2>
           </div>
-
-          <!-- || Contact -->
-          <div
-            id="sect__one__items__item3"
-            class="sect__one__items__item3 hide"
-          ></div>
         </div>
       </section>
-      <!-- || Footer -->
-      <footer>
-        <p>
-          Copyright &copy 2023 All rights reserved | A project by Mohammad Rafi
-          Amin
-        </p>
-      </footer>
     </main>
+    <!-- start footer -->
+    <footer class="footer" id="footer">
+      <h3>All writh reserved</h3>
+      <h3>Mohammad Rafi and </h3>
+    </footer>
+    <!-- end footer -->
   </body>
 </html>

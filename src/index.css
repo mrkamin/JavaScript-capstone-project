@@ -124,7 +124,6 @@ ul {
 
 header {
   background-color: var(--C-BASIC-LIGHT);
-  
 }
 
 .navbar {
@@ -156,6 +155,76 @@ header {
   transition: 0.7s ease;
 }
 
+.close__btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-size: 1.8rem;
+  background-color: var(--C-LIGHT);
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search__meal__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--C-LIGHT);
+  text-align: center;
+}
+
+.meal__search {
+  margin: 2rem 0;
+}
+
+.search__content {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-family: var(--FF);
+  outline: 0;
+  border: var(--BORDERS-BRAND);
+  color: var(--C-BRAND);
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+.formcontrol {
+  display: flex;
+  width: fit-content;
+  justify-self: center;
+  align-self: center;
+  gap: 10px;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  background-color: field;
+  margin: 1em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+  border-radius: 0.5rem;
+  border: none;
+  background: var(--C-BASIC-LIGHT);
+  border: none;
+  font-size: 20px;
+  color: var(--C-DARK);
+}
+
 .nav__link:hover {
   color: var(--C-BRAND);
 }
@@ -183,7 +252,7 @@ header {
   .bars:hover {
     background-color: var(--C-BRAND);
   }
-  
+
   .hamburger.active .bars:nth-child(2) {
     opacity: 0;
   }
@@ -213,14 +282,14 @@ header {
     font-size: larger;
     font-weight: bold;
   }
-  
+
   .nav__link:hover {
     color: var(--C-BRAND);
   }
 
- .nav__menue.active {
-  right: 0;
- }
+  .nav__menue.active {
+    right: 0;
+  }
 }
 
 .sect__one__cont {
@@ -292,6 +361,7 @@ header {
   position: fixed;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
   color: --C-LIGHT;
   background: var(--C-BRAND);
