@@ -1,11 +1,13 @@
-import { newTotalMeals } from "./variables";
-export const mealCounter = () => {
-  const newMealCounter = document.querySelectorAll(".meal-counter");
+const mealsCounter = () => {
+  const mealCounter = document.querySelectorAll('.meal__conter');
+  const totalMeals = document.querySelector('.total__meals');
 
-  if (newMealCounter.length < 1) {
-    newTotalMeals.innerHTML = ` (${0})`;
+  if (mealCounter.length < 1) {
+    totalMeals.innerHTML = ` (${0})`;
     return 0;
   }
-  newTotalMeals.innerHTML = ` (${newMealCounter.length})`;
-  return newMealCounter.length;
+  totalMeals.innerHTML = ` (${mealCounter.length})`;
+  return (mealCounter.length);
 };
+
+export default mealsCounter;

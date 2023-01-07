@@ -23,7 +23,7 @@ import { ApiLink } from "./modules/apiclass";
 /* import ApiLikes from "./modules/api_likes_class.js"; */
 import { LikesApi } from "./modules/apiLikesclass";
 /* import mealsCounter from "./modules/meals_counter.js"; */
-import { mealCounter } from "./modules/countermeals";
+import mealsCounter  from "./modules/countermeals";
 
 /* ======================================================================== */
 /* || Humberger Menut Function  */
@@ -112,14 +112,14 @@ window.addEventListener("load", async () => {
     return meal;
   });
   addMealElments(newMeals);
-  const mealCounters = document.querySelectorAll(".meal-counter");
+  const mealCounters = document.querySelectorAll(".meal__conter");
   let counter = 1;
 
   mealCounters.forEach((meal) => {
     meal.innerHTML = `Meal ${counter}`;
     counter += 1;
   });
-  mealCounter();
+  mealsCounter();
 /* ======================================================================== */
 /* || Likes */
   document.addEventListener("click", (event) => {

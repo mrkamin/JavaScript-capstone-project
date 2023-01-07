@@ -399,7 +399,7 @@ form {
 }
 
 @media screen and (min-width: 992px) {
-  #meal {
+  .all__meals {
     grid-template-columns: repeat(3, 1fr);
   }
 
