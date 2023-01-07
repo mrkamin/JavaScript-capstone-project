@@ -382,6 +382,79 @@ form {
   border-radius: 2rem;
 }
 
+
+.meal__search {
+  margin: 2rem 0;
+}
+
+.meal__search cite {
+  font-size: 1rem;
+}
+
+.meal__search__box {
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.search__content,
+.search__btn {
+  width: 100%;
+}
+
+.search__content {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-family: var(--FF);
+  outline: 0;
+  border: var(--BORDERS-BRAND);
+  color: var(--C-BRAND);
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+.search__content::placeholder {
+  color: var(--C-BRAND);
+}
+
+.search__btn {
+  width: 55px;
+  height: 55px;
+  font-size: 1.8rem;
+  background: var(--C-BRAND);
+  color: var(--C-LIGHT);
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border: none;
+  transition: all 0.4s linear;
+}
+
+.search__btn:hover {
+  background: var(--C-BASIC-BRAND);
+}
+
+.sect__one__cont__items {
+  margin-top: 4rem;
+}
+
+.recipe__close__btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-size: 1.8rem;
+  background-color: var(--C-LIGHT);
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+}
+
+
+
 @media screen and (min-width: 786px) {
   .all__meals {
     display: grid;
