@@ -1,6 +1,6 @@
-export class LikesApi {
+class LikesApi {
   static ApiLikesUrl =
-    "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/IXJFUIasaU3NTiCbJHbl/likes/";
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xy1aQPyLn78nCXi0a3Ol/likes/';
 
   static async likeGet() {
     const response = await fetch(LikesApi.ApiLikesUrl);
@@ -10,15 +10,17 @@ export class LikesApi {
 
   static async likePost(id) {
     const response = await fetch(LikesApi.ApiLikesUrl, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         item_id: id,
       }),
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
+        'Content-type': 'application/json; charset=UTF-8',
       },
     });
     const data = await response.json();
     return data;
   }
 }
+
+export default LikesApi;

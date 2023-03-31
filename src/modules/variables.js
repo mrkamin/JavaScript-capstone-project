@@ -35,7 +35,9 @@ export const newMealDetailsComment = document.getElementById('meal__details__com
 /* || Comment Close Btn */
 export const newCommentCloseBtn = document.getElementById('comment__close__btn');
 /* || Meals Wrapper Items Details for Comment Btn */
-export const newMealDetailsContentComment = document.getElementById('meal__details__content__comment');
+export const newMealDetailsContentComment = document.querySelector(
+  '.meal__details__content_Comment',
+);
 /* || Search Meals Wrapper */
 export const newMSearchMealsWrapper = document.getElementById('search__meal__wrapper');
 /* || Search Meals Wrapper Item */
@@ -55,3 +57,6 @@ export const newSearchMealsDetailsContentComment = document.getElementById('sear
 /* || Contact Meals Wrapper */
 export const newContactMealsWrapper = document.getElementById('contact__meal__wrapper');
 /* || Search Meals Wrapper Item */
+
+export const totalMeals = document.querySelector('.total__meals');
+export const totalMealsSearch = document.querySelector('.total__meals__search');

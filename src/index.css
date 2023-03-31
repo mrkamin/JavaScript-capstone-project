@@ -124,6 +124,7 @@ ul {
 
 header {
   background-color: var(--C-BASIC-LIGHT);
+  position: static;
 }
 
 .navbar {
@@ -132,6 +133,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+  position: relative;
 }
 
 .nav__menue {
@@ -185,44 +187,104 @@ form {
   text-align: center;
 }
 
-.meal__search {
-  margin: 2rem 0;
+.comment__details {
+  display: flex;
 }
 
-.search__content {
-  padding: 0 1rem;
-  font-size: 1.1rem;
-  font-family: var(--FF);
-  outline: 0;
-  border: var(--BORDERS-BRAND);
-  color: var(--C-BRAND);
-  border-bottom-left-radius: 2rem;
-  border-top-left-radius: 2rem;
+.comment__modal__details {
+  display: flex;
+  margin-top: 50px;
+}
+
+.comment__modal__details__detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.responsive {
+  width: 20%;
+  height: 80%;
+  border-radius: 50%;
 }
 
 .formcontrol {
   display: flex;
-  width: fit-content;
-  justify-self: center;
-  align-self: center;
+  flex-direction: column;
+  width: 100%;
   gap: 10px;
-  text-align: start;
-  appearance: auto;
-  -webkit-rtl-ordering: logical;
-  cursor: text;
-  background-color: field;
-  margin: 1em;
-  padding: 1px 2px;
-  border-width: 2px;
-  border-style: inset;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-  border-image: initial;
-  border-radius: 0.5rem;
+  padding: 40px;
+}
+
+#name {
+  width: 50%;
   border: none;
-  background: var(--C-BASIC-LIGHT);
+  border-radius: 0.2rem;
+  padding: 5px;
+}
+
+#textarea {
   border: none;
-  font-size: 20px;
+  border-radius: 0.3rem;
+  padding: 5px;
+}
+
+.sub_btn {
+  width: 25%;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 5px;
+  font-family: var(--FF);
+  font-size: var(--FS);
   color: var(--C-DARK);
+  font-weight: bold;
+}
+
+.comment_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+
+.meal_name {
+  color: var(--C-LIGHT);
+  font-family: var(--FF);
+  font-weight: bold;
+}
+
+.comment__modal__details__detail_detail {
+  background-color: var(--C-LIGHT);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comment-counts {
+  font-family: var(--FF);
+  color: var(--C-DARK);
+}
+
+#user__comments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.user_comments_li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+.user_comments_li:nth-child(even) {
+  background-color: var(--C-BASIC-LIGHT);
 }
 
 .nav__link:hover {
@@ -278,6 +340,13 @@ form {
     height: 90vh;
     font-weight: 100;
   }
+
+  .comment__modal__details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
   .nav__link {
     font-size: larger;
     font-weight: bold;
@@ -303,10 +372,6 @@ form {
   padding: 2rem;
   background-color: var(--C-LIGHT);
   text-align: center;
-}
-
-.all__meals {
-  margin-top: 2.4rem 0;
 }
 
 .meal {
@@ -361,9 +426,8 @@ form {
   position: fixed;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
-  color: --C-LIGHT;
+  color: var(--C-DARK);
   background: var(--C-BRAND);
   border-radius: 1rem;
   width: 90%;
@@ -381,7 +445,6 @@ form {
   background: var(--C-LIGHT);
   border-radius: 2rem;
 }
-
 
 .meal__search {
   margin: 2rem 0;
@@ -452,8 +515,6 @@ form {
   align-items: center;
   opacity: 0.9;
 }
-
-
 
 @media screen and (min-width: 786px) {
   .all__meals {
